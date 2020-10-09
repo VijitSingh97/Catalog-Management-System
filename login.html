@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="cataloguesystem.css">
+</head>
+<body>
+
+  <ul>
+    <li><a href="homepage.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a class="active" href="login.html">Login</a></li>
+    <li><a href="profile.php">My Profile</a></li>
+  </ul>
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  
+  <table>
+    <thead>
+        <tr>
+            <th>Register</th>
+            <th>Login</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="border-right center-align">
+              <form action="register.php" method="get"> 
+                <input type="text" name="name" placeholder="Full Name" /> 
+                <br/>
+                <select name="major_id" id="major_id">
+                  <?php
+                    $server = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "catalog_management_system";
+
+                    // Create connection
+                    $conn = new mysqli($server, $username, $password, $dbname);
+                    // Check connection
+                    if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                    } 
+
+                    $sql = "SELECT major_id, major_name FROM Majors";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo "<option value=\"" . $row["major_id"] . "\">" . $row["major_name"] . "</option>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                    $conn->close();
+                  ?>
+                </select>
+                <br />
+                <input type="text" name="email" placeholder="Email Address" /> 
+                <br/>
+                <input type="password" name="password" placeholder="Password" /> 
+                <br/>
+                <input type="password" name="verify_password" placeholder="Verify Password" /> 
+                <br/>
+                <select name="user_type" id="user_id">
+                  <option value="student">Student</option>
+                  <option value="staff">Staff</option>
+                  <option value="admin">Admin</option>
+                </select>
+                <br/>
+                <input type="submit" name="submit" />
+              </form>
+            </td>
+            <td class="center-align">
+              <form action="login.php" method="get">
+                <input type="text" name="email" placeholder="Email Address" /> 
+                <br/>
+                <input type="text" name="password" placeholder="Password" />
+                <br/>
+                <input type="submit" name="submit" />
+              </form>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

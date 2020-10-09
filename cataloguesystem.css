@@ -1,0 +1,107 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.centered {
+    position: fixed;
+    top: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.top {
+    top: 10%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 20px 0;
+}
+
+table > td {  
+    padding: 10px 0;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.border-right {
+    padding-right: 20px;
+    border-right: 1px solid grey;
+}
+
+.border-top {
+    padding-top: 5px;
+    border-top: 1px solid grey;
+}
+
+.image-txt-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding:5px; /* this */
+}
+
+.image-txt-container > div
+{
+  flex:1 1 auto;
+  text-align:center;
+
+  margin:25px;  /* and that, will result in a 10px gap */
+}
+
+
+.center-align {
+    text-align: center;
+    vertical-align: center;
+}
+
+ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover:not(.active) {
+    background-color: #111;
+}
+  
+.active {
+    background-color: lightsteelblue;
+}
