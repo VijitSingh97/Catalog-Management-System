@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
     $server = "localhost";
     $username = "root";
     $password = "";
@@ -36,4 +36,4 @@
 
 
     // header("Location: login.html");
-?>
+?> -->

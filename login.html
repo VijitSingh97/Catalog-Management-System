@@ -32,7 +32,11 @@
                 <input type="text" name="name" placeholder="Full Name" /> 
                 <br/>
                 <select name="major_id" id="major_id">
-                  <?php
+                  <option value="0">None</option>
+                  <option value="1">Computer Science</option>
+                  <option value="2">Electrical Engineering</option>
+                  <option value="3">Civil Engineering</option>
+                  <!-- <?php
                     $server = "localhost";
                     $username = "root";
                     $password = "";
@@ -57,7 +61,7 @@
                         echo "0 results";
                     }
                     $conn->close();
-                  ?>
+                  ?> -->
                 </select>
                 <br />
                 <input type="text" name="email" placeholder="Email Address" /> 
