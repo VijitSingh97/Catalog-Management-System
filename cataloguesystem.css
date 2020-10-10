@@ -1,5 +1,10 @@
+/*  * Singh, Vijit
+    * 1001238476
+    */
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: lightyellow;
 }
 
 .centered {
@@ -104,4 +109,27 @@ li a:hover:not(.active) {
   
 .active {
     background-color: lightsteelblue;
+}
+
+form {
+    width: 550px;
+    height: 450px;
+    margin: auto;
+    position: relative;
+}
+
+input {
+    width: 375px;
+    height: 35px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 382px;
+    height: 35px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
